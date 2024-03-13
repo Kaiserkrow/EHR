@@ -1,0 +1,213 @@
+/* ------------------- Overall style-------------------------- */
+:root {
+  --violet: #5463d0;
+}
+body {
+  background-color: white;
+  color: white;
+}
+
+h1 {
+  font-size: calc(2vw + 5vh + 1vmin);
+}
+
+h2 {
+  font-size: calc(1.75vw + 4vh + 1vmin);
+}
+
+.x-button {
+  filter: brightness(0) invert(1);
+}
+
+.w-logo {
+  margin: 2rem 0 3rem 3.2rem;
+}
+
+.hyperlinks li:first-of-type {
+  border-top: 1px solid rgba(85, 85, 85, 0.276);
+}
+.hyperlinks li {
+  border-bottom: 1px solid rgba(85, 85, 85, 0.276);
+}
+
+.social-container {
+  margin-left: -3rem;
+}
+.socials {
+  width: 2rem;
+  filter: invert(50%);
+}
+
+li {
+  list-style: none;
+  margin-left: 1rem;
+}
+.links {
+  filter: invert(1);
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.button {
+  border: none;
+  color: white;
+  background-color: #ea0f1e;
+  width: 14rem;
+  margin-left: 0.4rem;
+  margin-top: 3rem;
+  padding: 0.8rem 2rem;
+  border-radius: 15px;
+}
+.hidden {
+  display: none;
+  cursor: default;
+}
+
+.nursing-img {
+  width: 85px;
+  filter: invert(1);
+}
+
+/* ------------------sidebar stuff---------------------- */
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: var(--violet);
+  overflow: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidebar a {
+  padding: 1rem 1rem 1rem;
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  left: 10px;
+  font-size: 30px;
+}
+
+#open-close-btn {
+  border-radius: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  background-color: var(--violet);
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+#main {
+  transition: margin-left 0.5s;
+  padding: 16px;
+}
+.sidebar-img {
+  width: 25px;
+}
+
+.dashboard:before {
+  content: "HJAHAHAHAHAHA";
+  font-size: 100px;
+  color: #000000;
+  z-index: 1000;
+}
+
+/* -------------------------containers---------------------------------------- */
+
+#intro-container {
+  margin: 6rem 0 0 5rem;
+}
+#skills-container {
+  margin: 0 1rem 0 2rem;
+}
+#about-container {
+  margin: 11rem 3rem 0 4rem;
+  overflow-x: hidden;
+}
+#contact-container {
+  margin: 0 1rem 0 4rem;
+}
+
+/* ---------------------HOVERS sidebar--------------------------------- */
+
+button a:hover {
+  color: white;
+}
+button:hover {
+  opacity: 0.7;
+}
+.socials:hover {
+  opacity: 0.8;
+}
+
+.openbtn:hover {
+  background-color: #000000;
+}
+
+.hover-links:hover {
+  opacity: 0.5;
+}
+
+/* ----------------animation--------------------------- */
+.web-dev::after {
+  content: "";
+  width: 5px;
+  height: calc(2vw + 4vh + 2vmin);
+  margin-left: 1rem;
+  background: white;
+  display: inline-block;
+  animation: cursor-blink 1.5s steps(2) infinite;
+}
+
+@keyframes cursor-blink {
+  0% {
+    opacity: 0;
+  }
+}
+
+/*-------------------Medias---------------------*/
+@media (max-width: 600px) {
+  #intro-container {
+    margin-left: 2.5rem;
+  }
+  .w-logo {
+    margin: 2rem 0 4rem 2.4rem;
+  }
+  #about-container {
+    margin: 0rem 2rem 0 3rem;
+  }
+
+  #contact-container {
+    margin: 0 1rem 2rem 2rem;
+  }
+}
+@media (max-width: 520px) {
+  #intro-container {
+    margin-top: 4rem;
+  }
+  #skills-container {
+    margin-top: 0rem;
+  }
+  .links {
+    padding: 2rem 0;
+  }
+}
+@media screen and (max-height: 450px) {
+  .sidebar {
+    padding-top: 15px;
+  }
+  .sidebar a {
+    font-size: 18px;
+  }
+}

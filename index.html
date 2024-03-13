@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EHR - Dashboard</title>
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="/asset/nurse-256.png" />
+  </head>
+  <body>
+    <!--Start of side bar, position absolute to remove sidebar from document flow-->
+    <div>
+      <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" id="close-btn1" onclick="openNav()"
+          ><span id="close-btn2" class="hidden">×</span></a
+        >
+        <main class="d-flex flex-column">
+          <div>
+            <a href="/index.html" class="d-flex justify-content-center">
+              <img src="/asset/nursing-icon.png" class="nursing-img" />
+            </a>
+          </div>
+
+          <div>
+            <ul class="hyperlinks mt-md-5">
+              <li class="py-md-3">
+                <a href="/index.html" class="links hover-links"
+                  ><img
+                    class="sidebar-img dashboard"
+                    src="asset/dashboard-icon.png"
+                    alt=""
+                  />
+                </a>
+              </li>
+              <li class="py-md-3">
+                <a href="skills.html" class="links hover-links"
+                  ><img
+                    class="sidebar-img"
+                    src="asset/anonymous-icon.png"
+                    alt=""
+                /></a>
+              </li>
+              <li class="py-md-3">
+                <a href="skills.html"
+                  ><img
+                    class="sidebar-img hover-links"
+                    src="asset/settings.png"
+                    alt=""
+                /></a>
+              </li>
+            </ul>
+          </div>
+        </main>
+      </div>
+
+      <div id="main">
+        <button class="openbtn" id="open-close-btn" onclick="openNav()">
+          ☰
+        </button>
+      </div>
+    </div>
+    <!--End of sidebar-->
+
+    <div id="intro-container"></div>
+  </body>
+  <script src="js/bootstrap.bundle.js"></script>
+  <script src="index.js"></script>
+</html>
