@@ -125,7 +125,7 @@ a {
 
 /* -------------------------containers---------------------------------------- */
 
-#intro-container {
+#dashboard-container {
   margin: 6rem 0 0 5rem;
 }
 #skills-container {
@@ -178,7 +178,7 @@ button:hover {
 
 /*-------------------Medias---------------------*/
 @media (max-width: 600px) {
-  #intro-container {
+  #dashboard-container {
     margin-left: 2.5rem;
   }
   .w-logo {
@@ -193,7 +193,7 @@ button:hover {
   }
 }
 @media (max-width: 520px) {
-  #intro-container {
+  #dashboard-container {
     margin-top: 4rem;
   }
   #skills-container {

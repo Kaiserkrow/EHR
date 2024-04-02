@@ -2,6 +2,7 @@ let isOpen = 1;
 let button = document.getElementById("open-close-btn");
 let closebtn1 = document.getElementById("close-btn1");
 let closebtn2 = document.getElementById("close-btn2");
+
 function openNav() {
   let width = window.innerWidth;
   if (isOpen == 0) {
