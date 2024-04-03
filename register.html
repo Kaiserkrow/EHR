@@ -12,9 +12,30 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
   </head>
 
   <body>
+    <div class="toast">
+      <div class="toast-content">
+        <span class="check">✔</span>
+
+        <div class="message">
+          <span class="text text-1">Success</span>
+          <span class="text text-2"
+            >User information is saved. Go to Login</span
+          >
+        </div>
+      </div>
+      <span class="close">✖</span>
+
+      <!-- Remove 'active' class, this is just to show in Codepen thumbnail -->
+      <div class="progress"></div>
+    </div>
+
     <input
       type="radio"
       id="registerForm"
@@ -24,11 +45,12 @@
     />
 
     <div class="wrapper" id="registerFormContent">
-      <form action="" autocomplete="new-password">
+      <form autocomplete="new-password">
         <h1>Register</h1>
         <div class="input-box">
           <input
             type="text"
+            id="username"
             name="username"
             placeholder="Username"
             required
@@ -38,6 +60,7 @@
 
         <div class="input-box">
           <input
+            id="password"
             type="password"
             placeholder="Password"
             required
@@ -47,15 +70,19 @@
 
         <div class="checkbox1">
           <label
-            ><input type="checkbox" required />I agree to terms &
+            ><input type="checkbox" id="checkbox" required />I agree to terms &
             conditions</label
           >
         </div>
-        <button type="submit" class="btn">Register</button>
+        <button type="button" id="submit" class="btn disabled" disabled>
+          Register
+        </button>
         <div class="link">
           <p>Already have an account? <a href="./login.html">Login</a></p>
         </div>
       </form>
     </div>
   </body>
+  <script type="module" src="./asset/css_js/firebase.js"></script>
+  <!-- <script src="./asset/css_js/toast.js"></script> -->
 </html>

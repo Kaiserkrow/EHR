@@ -25,6 +25,8 @@ body {
   background-size: cover;
 
   background-position: center;
+
+  overflow: hidden;
 }
 
 .wrapper {
@@ -123,38 +125,6 @@ body {
   text-decoration: underline;
 }
 
-.wrapper .btn {
-  width: 100%;
-
-  height: 45px;
-  margin: 30px 0 0 0;
-  background: var(--violet);
-
-  border: none;
-
-  outline: none;
-
-  border-radius: 40px;
-
-  border: 1px solid var(--violet);
-
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-
-  cursor: pointer;
-
-  font-size: 1.2rem;
-
-  color: white;
-
-  font-weight: 600;
-}
-.wrapper .btn:hover {
-  background: rgb(247, 244, 250);
-  color: var(--violet);
-  border: 1px solid white;
-  transition: all 0.1s ease-out;
-  opacity: 0.9;
-}
 .wrapper .link {
   font-size: 14.5px;
 
@@ -185,5 +155,138 @@ input[type="radio"] {
   display: none;
 }
 
-@keyframes ease {
+.disabled {
+  transition: all 0.1s ease-in-out;
+  cursor: none;
+  opacity: 0.3;
+}
+
+.toast {
+  position: absolute;
+  top: 25px;
+  right: 30px;
+  border-radius: 12px;
+  background: #fff;
+  padding: 20px 35px 20px 25px;
+  box-shadow: 0 6px 20px -5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transform: translateX(calc(100% + 30px));
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.35);
+}
+
+.toast.active {
+  transform: translateX(0%);
+}
+
+.toast .toast-content {
+  display: flex;
+  align-items: center;
+}
+
+.toast-content .check {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 35px;
+  min-width: 35px;
+  background-color: #2770ff;
+  color: #fff;
+  font-size: 20px;
+  border-radius: 50%;
+}
+
+.toast-content .message {
+  display: flex;
+  flex-direction: column;
+  margin: 0 20px;
+}
+
+.message .text {
+  font-size: 16px;
+  font-weight: 400;
+  color: #666666;
+}
+
+.message .text.text-1 {
+  font-weight: 600;
+  color: #333;
+}
+
+.toast .close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  padding: 5px;
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.toast .close:hover {
+  opacity: 1;
+}
+
+.toast .progress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  width: 100%;
+}
+
+.toast .progress:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--violet);
+}
+
+.progress.active:before {
+  animation: progress 5s linear forwards;
+}
+
+@keyframes progress {
+  100% {
+    right: 100%;
+  }
+}
+
+.toast.active ~ button {
+  pointer-events: none;
+}
+
+.btn {
+  width: 100%;
+
+  height: 45px !important;
+  margin: 30px 0 0 0 !important;
+  background: var(--violet);
+
+  border: none;
+
+  outline: none;
+
+  border-radius: 40px;
+
+  border: 1px solid var(--violet);
+
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+  cursor: pointer;
+
+  font-size: 1.2rem !important;
+
+  color: white;
+
+  font-weight: 600;
+}
+
+.btn:hover {
+  background: rgb(247, 244, 250);
+  color: var(--violet);
+  border: 1px solid white;
+  transition: all 0.1s ease-out;
+  opacity: 0.9;
 }
