@@ -7,6 +7,7 @@
     <title>EHR - Login</title>
     <link rel="icon" type="image/x-icon" href="./asset/nurse-256.png" />
     <link rel="stylesheet" href="./asset/css_js/login.css" type="text/css" />
+    <link rel="stylesheet" href="./asset/css_js/toast.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -16,6 +17,20 @@
   </head>
 
   <body>
+    <div class="toast">
+      <div class="toast-content">
+        <span class="check failed">✖</span>
+
+        <div class="message">
+          <span class="text text-1">Failed to Login</span>
+          <span class="text text-2">Account does not exist.</span>
+        </div>
+      </div>
+      <span class="close">✖</span>
+
+      <!-- Remove 'active' class, this is just to show in Codepen thumbnail -->
+      <div class="progress"></div>
+    </div>
     <input type="radio" id="loginForm" name="formToggle" checked />
 
     <input type="radio" id="registerForm" name="formToggle" />
@@ -26,6 +41,7 @@
         <div class="input-box">
           <input
             type="text"
+            id="username"
             placeholder="Username"
             required
             autocomplete="new-password"
@@ -34,6 +50,7 @@
 
         <div class="input-box">
           <input
+            id="password"
             type="password"
             placeholder="Password"
             required
@@ -41,11 +58,13 @@
           />
         </div>
 
-        <button type="submit" class="btn">Login</button>
+        <button type="submit" id="submit" class="btn">Login</button>
         <div class="link">
           <p>Don't have an account? <a href="./register.html">Register</a></p>
         </div>
       </form>
     </div>
   </body>
+
+  <script type="module" src="./asset/css_js/login.js"></script>
 </html>
