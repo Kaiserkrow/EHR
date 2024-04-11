@@ -3,8 +3,7 @@
   --violet: #5463d0;
 }
 body {
-  background-color: white;
-  color: white;
+  background-color: #f6f7fe;
 }
 
 h1 {
@@ -68,6 +67,7 @@ a {
 .nursing-img {
   width: 85px;
   filter: invert(1);
+  margin-top: -3rem;
 }
 
 /* ------------------sidebar stuff---------------------- */
@@ -138,10 +138,17 @@ a {
   color: #5463d0;
 }
 
+.title {
+  margin-bottom: 8rem;
+}
+.parent {
+  gap: 3rem;
+}
 /* -------------------------containers---------------------------------------- */
 
 #dashboard-container {
-  margin: 6rem 0 0 5rem;
+  margin: -2.5rem 0 0 14rem;
+  color: black;
 }
 #skills-container {
   margin: 0 1rem 0 2rem;
@@ -174,21 +181,32 @@ button:hover {
   opacity: 0.5;
 }
 
-/* ----------------animation--------------------------- */
-.web-dev::after {
-  content: "";
-  width: 5px;
-  height: calc(2vw + 4vh + 2vmin);
-  margin-left: 1rem;
-  background: white;
-  display: inline-block;
-  animation: cursor-blink 1.5s steps(2) infinite;
-}
+/* ----------------dashboard stuff--------------------------- */
 
-@keyframes cursor-blink {
-  0% {
-    opacity: 0;
-  }
+.parent {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+.parent div {
+  border: #000000;
+}
+.div1 {
+  grid-area: 1 / 1 / 2 / 2;
+}
+.div2 {
+  grid-area: 1 / 2 / 2 / 3;
+}
+.div3 {
+  grid-area: 2 / 1 / 3 / 3;
+}
+.div4 {
+  grid-area: 3 / 1 / 6 / 3;
+}
+.div5 {
+  grid-area: 1 / 3 / 3 / 5;
 }
 
 /*-------------------Medias---------------------*/
@@ -209,7 +227,7 @@ button:hover {
 }
 @media (max-width: 520px) {
   #dashboard-container {
-    margin-top: 4rem;
+    margin-top: 0;
   }
   #skills-container {
     margin-top: 0rem;
