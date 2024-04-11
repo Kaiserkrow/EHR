@@ -116,11 +116,26 @@ a {
   width: 25px;
 }
 
-.dashboard:before {
-  content: "HJAHAHAHAHAHA";
-  font-size: 100px;
-  color: #000000;
-  z-index: 1000;
+.logout {
+  outline: none;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: 600;
+  color: white;
+  background-color: var(--violet);
+  cursor: pointer;
+  border: none;
+  height: 35px;
+  width: 100px;
+  opacity: 1;
+}
+.logout-img {
+  width: 15px;
+  margin-top: -3px;
+}
+.logout:hover {
+  background-color: white;
+  color: #5463d0;
 }
 
 /* -------------------------containers---------------------------------------- */

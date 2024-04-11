@@ -73,7 +73,6 @@ document.getElementById("submit").addEventListener("click", async function (e) {
     document.querySelector(".text-1").textContent = "Failed to Register.";
     document.querySelector(".text-2").textContent = "Account already exist.";
   } else {
-    console.log("wala ka dito");
     try {
       const docRef = await addDoc(collection(db, "users"), {
         userName: `${userName}`,

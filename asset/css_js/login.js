@@ -1,8 +1,12 @@
+const auth = localStorage.getItem("auth");
+if (auth == 1) {
+  window.location.replace("/dashboard.html");
+}
+
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-app.js";
 import {
   getFirestore,
   collection,
-  addDoc,
   getDocs,
 } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-firestore.js";
 // TODO: Add SDKs for Firebase products that you want to use
@@ -47,6 +51,8 @@ document.getElementById("submit").addEventListener("click", async function (e) {
   });
 
   if (doesUserExist == 1) {
+    localStorage.setItem("auth", 1);
+    window.location.replace("/dashboard.html");
   } else {
     toast.classList.add("active");
     progress.classList.add("active");
