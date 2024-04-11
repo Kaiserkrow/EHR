@@ -1,8 +1,10 @@
 const auth = localStorage.getItem("auth");
+document.querySelector("body").style.opacity = "0";
 if (auth == 1) {
   window.location.replace("/dashboard.html");
+} else {
+  document.querySelector("body").style.opacity = "1";
 }
-
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-app.js";
 import {
   getFirestore,
