@@ -49,6 +49,37 @@ document.getElementById("submit").addEventListener("click", async function (e) {
   let userName = document.getElementById("username").value;
   let password = document.getElementById("password").value;
   let doesUserExist = 0;
+
+  if (userName == "" || password == "") {
+    document.querySelector(".check").textContent = "✖";
+    document.querySelector(".check").classList.add("failed");
+    document.querySelector(".text-1").textContent = "Failed";
+    document.querySelector(".text-2").textContent = "Fill the empty field.";
+    toast.classList.add("active");
+    progress.classList.add("active");
+
+    timer1 = setTimeout(() => {
+      toast.classList.remove("active");
+    }, 5000); //1s = 1000 milliseconds
+
+    timer2 = setTimeout(() => {
+      progress.classList.remove("active");
+    }, 5300);
+
+    closeIcon.addEventListener("click", () => {
+      toast.classList.remove("active");
+
+      setTimeout(() => {
+        progress.classList.remove("active");
+      }, 300);
+
+      clearTimeout(timer1);
+      clearTimeout(timer2);
+    });
+
+    return;
+  }
+
   document.querySelector(".check").textContent = "✔";
   document.querySelector(".check").classList.remove("failed");
   document.querySelector(".text-1").textContent = "Success";

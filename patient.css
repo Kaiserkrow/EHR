@@ -1,0 +1,20 @@
+:root {
+  --violet: #5463d0;
+}
+.btn-patient,
+.btn-patient:focus,
+.btn-patient:active {
+  background-color: var(--violet);
+  color: white;
+  font-family: poppins;
+}
+
+#add-patient {
+  color: var(--violet);
+}
+.btn-close {
+  font-family: poppins;
+}
+.red {
+  color: red;
+}
