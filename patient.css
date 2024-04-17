@@ -12,9 +12,23 @@
 #add-patient {
   color: var(--violet);
 }
-.btn-close {
+#btn-close {
   font-family: poppins;
 }
 .red {
   color: red;
+}
+
+input[type="radio"] {
+  transform: scale(1.5);
+}
+
+#calendar-img {
+  width: 25px;
+}
+.date-picker {
+  margin-top: 1px;
+  border: 1px solid gray;
+  padding-left: 10px;
+  border-radius: 5px;
 }
