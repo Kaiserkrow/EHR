@@ -42,6 +42,7 @@ li {
   list-style: none;
   margin-left: 1rem;
 }
+
 .links {
   filter: invert(1);
 }
@@ -184,6 +185,12 @@ button:hover {
 }
 
 .hover-links:hover {
+  opacity: 0.5;
+}
+.links:hover {
+  opacity: 0.5;
+}
+.settings:hover {
   opacity: 0.5;
 }
 

@@ -54,11 +54,8 @@
                 /></a>
               </li>
               <li class="py-md-3">
-                <a href="settings.html"
-                  ><img
-                    class="sidebar-img hover-links"
-                    src="asset/settings.png"
-                    alt=""
+                <a href="settings.html" class="settings"
+                  ><img class="sidebar-img" src="asset/settings.png" alt=""
                 /></a>
               </li>
             </ul>
@@ -143,7 +140,7 @@
                       class="accordion-collapse collapse show"
                     >
                       <div
-                        class="accordion-body d-flex justify-content-between me-5 ms-5"
+                        class="accordion-body d-flex justify-content-between me-5 ms-5 mt-3"
                       >
                         <div>
                           <div class="d-flex flex-column">
@@ -157,6 +154,7 @@
                                 type="number"
                                 name="patient-id"
                                 id="patient-id"
+                                placeholder="Enter the patient ID"
                                 required
                               />
                             </div>
@@ -171,6 +169,7 @@
                             <div>
                               <input
                                 type="text"
+                                placeholder="Enter the patient name"
                                 name="patient-name"
                                 id="patient-name"
                                 required
@@ -215,7 +214,29 @@
                               </div>
                             </div>
                           </div>
-                          <div class="form-container">
+                          <div class="date-container">
+                            <label for="date-picker" class="mt-3 mb-2"
+                              >Date of Birth <span class="red">*</span></label
+                            >
+                            <div class="d-flex">
+                              <div>
+                                <img
+                                  src="./asset/calendar.png"
+                                  alt=""
+                                  id="calendar-img"
+                                  class="me-1"
+                                />
+                              </div>
+                              <div class="w-100">
+                                <input
+                                  class="birth-date date"
+                                  type="datetime-local"
+                                  placeholder="Select date"
+                                />
+                              </div>
+                            </div>
+                          </div>
+                          <div class="form-container w-100">
                             <label for="date-picker" class="mt-3 mb-2"
                               >Admission Date <span class="red">*</span></label
                             >
@@ -237,28 +258,6 @@
                               </div>
                             </div>
                           </div>
-                          <div class="date-container mb-3">
-                            <label for="date-picker" class="mt-3 mb-2"
-                              >Date of Birth <span class="red">*</span></label
-                            >
-                            <div class="d-flex">
-                              <div>
-                                <img
-                                  src="./asset/calendar.png"
-                                  alt=""
-                                  id="calendar-img"
-                                  class="me-1"
-                                />
-                              </div>
-                              <div class="w-100">
-                                <input
-                                  class="birth-date date"
-                                  type="datetime-local"
-                                  placeholder="Select Date"
-                                />
-                              </div>
-                            </div>
-                          </div>
                         </div>
                         <div>
                           <div class="d-flex flex-column">
@@ -274,6 +273,7 @@
                                 id="patient-height"
                                 required
                                 class="w-100"
+                                placeholder="Enter height"
                               />
                             </div>
                           </div>
@@ -290,6 +290,7 @@
                                 id="patient-weight"
                                 required
                                 class="w-100"
+                                placeholder="Enter weight"
                               />
                             </div>
                           </div>
@@ -307,6 +308,7 @@
                                 name="patient-temp"
                                 id="patient-temp"
                                 required
+                                placeholder="Enter body temperature"
                                 class="w-100"
                               />
                             </div>
@@ -325,6 +327,7 @@
                                 name="patient-pressure"
                                 id="patient-pressure-1"
                                 class="patient-pressure"
+                                placeholder="0"
                                 required
                               />
                               <span class="me-3 ms-3 slash"> / </span>
@@ -333,6 +336,7 @@
                                 name="patient-pressure"
                                 id="patient-pressure-2"
                                 class="patient-pressure"
+                                placeholder="0"
                                 required
                               />
                             </div>
@@ -362,19 +366,104 @@
                         <div>
                           <div class="d-flex flex-column">
                             <div class="mt-3 mb-1">
-                              <label for="patient-id"
-                                >Patient ID <span class="red">*</span></label
+                              <label for="patient-blood"
+                                >Blood Type <span class="red">*</span></label
                               >
                             </div>
                             <div>
+                              <select
+                                name="blood-type"
+                                id="blood-type"
+                                class="w-100"
+                              >
+                                <option
+                                  disabled
+                                  selected
+                                  value
+                                  class="text-center"
+                                >
+                                  -- Select Blood Type --
+                                </option>
+                                <option value="a+">A+</option>
+                                <option value="a-">A-</option>
+                                <option value="b+">B+</option>
+                                <option value="b-">B-</option>
+                                <option value="o+">O+</option>
+                                <option value="o-">O-</option>
+                                <option value="ab+">AB+</option>
+                                <option value="ab-">AB-</option>
+                              </select>
+                            </div>
+                          </div>
+
+                          <div class="d-flex flex-column">
+                            <div class="mt-3 mb-1">
+                              <label for="patient-occupation"
+                                >Occupation
+                              </label>
+                            </div>
+                            <div>
                               <input
-                                type="number"
-                                name="patient-id"
-                                id="patient-id"
-                                required
+                                type="text"
+                                name="patient-occupation"
+                                id="patient-occupation"
+                                class="w-100"
+                                placeholder="Enter the occupation"
                               />
                             </div>
                           </div>
+
+                          <div class="d-flex flex-column">
+                            <div class="mt-3 mb-1">
+                              <label for="patient-religion">Religion </label>
+                            </div>
+                            <div>
+                              <input
+                                type="text"
+                                name="patient-occupation"
+                                id="patient-occupation"
+                                class="w-100"
+                                placeholder="Enter the religion"
+                              />
+                            </div>
+                          </div>
+                          <div class="d-flex flex-column">
+                            <div class="mt-3 mb-1">
+                              <label for="patient-nationality"
+                                >Nationality
+                              </label>
+                            </div>
+                            <div>
+                              <input
+                                type="text"
+                                name="patient-nationality"
+                                id="patient-nationality"
+                                placeholder="Enter the nationality"
+                                class="w-100"
+                              />
+                            </div>
+                          </div>
+
+                          <!-- used for spacing only, tamad na ako para ayusin -->
+                          <div class="spacing">
+                            <div class="d-flex ms-1">
+                              <div class="me-4">
+                                <input type="radio" />
+                                <label for="gender1" class="ms-1">Male</label
+                                ><br />
+                              </div>
+                              <div class="me-4">
+                                <input type="radio" />
+                                <label for="gender2" class="ms-1">Female</label
+                                ><br />
+                              </div>
+                              <div>
+                                <input type="radio" />
+                                <label for="gender3" class="ms-1">Other</label>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- ===================end of spacing=================== -->
                         </div>
                       </div>
                     </div>
@@ -396,19 +485,169 @@
                       id="communication-details"
                       class="accordion-collapse collapse show"
                     >
-                      <div class="accordion-body">
-                        <strong
-                          >This is the first item's accordion body.</strong
-                        >
-                        It is shown by default, until the collapse plugin adds
-                        the appropriate classes that we use to style each
-                        element. These classes control the overall appearance,
-                        as well as the showing and hiding via CSS transitions.
-                        You can modify any of this with custom CSS or overriding
-                        our default variables. It's also worth noting that just
-                        about any HTML can go within the
-                        <code>.accordion-body</code>, though the transition does
-                        limit overflow.
+                      <div
+                        class="accordion-body d-flex justify-content-between me-5 ms-5 mt-3"
+                      >
+                        <div>
+                          <div class="d-flex flex-column">
+                            <div class="mt-3 mb-1">
+                              <label for="patient-address"
+                                >Address <span class="red">*</span></label
+                              >
+                            </div>
+                            <div>
+                              <input
+                                type="text"
+                                name="patient-address"
+                                id="patient-address"
+                                placeholder="Enter the address"
+                                required
+                                class="w-100"
+                              />
+                            </div>
+                          </div>
+                          <div class="d-flex flex-column">
+                            <div class="mt-3 mb-1">
+                              <label for="patient-country">Country </label>
+                            </div>
+                            <div>
+                              <input
+                                type="text"
+                                placeholder="Enter the country"
+                                name="patient-country"
+                                id="patient-country"
+                                class="w-100"
+                              />
+                            </div>
+                          </div>
+                          <!-- used for spacing only, tamad na ako para ayusin -->
+                          <div class="spacing">
+                            <div class="d-flex ms-1">
+                              <div class="me-4">
+                                <input type="radio" />
+                                <label for="gender1" class="ms-1">Male</label
+                                ><br />
+                              </div>
+                              <div class="me-4">
+                                <input type="radio" />
+                                <label for="gender2" class="ms-1">Female</label
+                                ><br />
+                              </div>
+                              <div>
+                                <input type="radio" />
+                                <label for="gender3" class="ms-1">Other</label>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- ===================end of spacing=================== -->
+                        </div>
+                        <div>
+                          <div class="d-flex flex-column">
+                            <div class="mt-3 mb-1">
+                              <label for="patient-city">City</label>
+                            </div>
+                            <div>
+                              <input
+                                type="text"
+                                name="patient-city"
+                                id="patient-city"
+                                class="w-100"
+                                placeholder="Enter the city"
+                              />
+                            </div>
+                          </div>
+                          <div class="d-flex flex-column">
+                            <div class="mt-3 mb-1">
+                              <label for="patient-email">Email</label>
+                            </div>
+                            <div>
+                              <input
+                                type="email"
+                                name="patient-email"
+                                id="patient-email"
+                                class="w-100"
+                                placeholder="Enter the email"
+                              />
+                            </div>
+                          </div>
+
+                          <!-- used for spacing only, tamad na ako para ayusin -->
+                          <div class="spacing">
+                            <div class="d-flex ms-1">
+                              <div class="me-4">
+                                <input type="radio" />
+                                <label for="gender1" class="ms-1">Male</label
+                                ><br />
+                              </div>
+                              <div class="me-4">
+                                <input type="radio" />
+                                <label for="gender2" class="ms-1">Female</label
+                                ><br />
+                              </div>
+                              <div>
+                                <input type="radio" />
+                                <label for="gender3" class="ms-1">Other</label>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- ===================end of spacing=================== -->
+                        </div>
+                        <div class="mb-4">
+                          <div class="d-flex flex-column">
+                            <div class="mt-3 mb-1">
+                              <label for="patient-contact-1"
+                                >Contact No. 1
+                              </label>
+                            </div>
+                            <div>
+                              <input
+                                type="tel"
+                                name="patient-contact-1"
+                                id="patient-contact-1"
+                                class="w-100"
+                                placeholder="Enter the first contact No."
+                              />
+                            </div>
+                          </div>
+
+                          <div class="d-flex flex-column">
+                            <div class="mt-3 mb-1">
+                              <label for="patient-contact-2"
+                                >Contact No. 2
+                              </label>
+                            </div>
+                            <div>
+                              <input
+                                type="tel"
+                                name="patient-contact-2"
+                                id="patient-contact-2"
+                                class="w-100"
+                                placeholder="Enter the second contact No."
+                              />
+                            </div>
+                          </div>
+
+                          <!-- used for spacing only, tamad na ako para ayusin -->
+                          <div class="spacing">
+                            <div class="d-flex ms-1">
+                              <div class="me-4">
+                                <input type="radio" />
+                                <label for="gender1" class="ms-1">Male</label
+                                ><br />
+                              </div>
+                              <div class="me-4">
+                                <input type="radio" />
+                                <label for="gender2" class="ms-1">Female</label
+                                ><br />
+                              </div>
+                              <div>
+                                <input type="radio" />
+                                <label for="gender3" class="ms-1">Other</label>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- ===================end of spacing=================== -->
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -429,19 +668,170 @@
                       id="emergency-contact"
                       class="accordion-collapse collapse show"
                     >
-                      <div class="accordion-body">
-                        <strong
-                          >This is the first item's accordion body.</strong
-                        >
-                        It is shown by default, until the collapse plugin adds
-                        the appropriate classes that we use to style each
-                        element. These classes control the overall appearance,
-                        as well as the showing and hiding via CSS transitions.
-                        You can modify any of this with custom CSS or overriding
-                        our default variables. It's also worth noting that just
-                        about any HTML can go within the
-                        <code>.accordion-body</code>, though the transition does
-                        limit overflow.
+                      <div
+                        class="accordion-body d-flex justify-content-between me-5 ms-5 mt-3"
+                      >
+                        <div>
+                          <div class="d-flex flex-column">
+                            <div class="mt-3 mb-1">
+                              <label for="patient-emergency-name">Name </label>
+                            </div>
+                            <div>
+                              <input
+                                type="text"
+                                name="patient-emergency-name"
+                                id="patient-emergency-name"
+                                placeholder="Enter the name"
+                                class="w-100"
+                              />
+                            </div>
+                          </div>
+                          <div class="d-flex flex-column">
+                            <div class="mt-3 mb-1">
+                              <label for="patient-emergency-relationship"
+                                >Relationship
+                              </label>
+                            </div>
+                            <div>
+                              <input
+                                type="text"
+                                placeholder="Enter the relationship"
+                                name="patient-emergency-relationship"
+                                id="patient-emergency-relationship"
+                                class="w-100"
+                              />
+                            </div>
+                          </div>
+                          <!-- used for spacing only, tamad na ako para ayusin -->
+                          <div class="spacing">
+                            <div class="d-flex ms-1">
+                              <div class="me-4">
+                                <input type="radio" />
+                                <label for="gender1" class="ms-1">Male</label
+                                ><br />
+                              </div>
+                              <div class="me-4">
+                                <input type="radio" />
+                                <label for="gender2" class="ms-1">Female</label
+                                ><br />
+                              </div>
+                              <div>
+                                <input type="radio" />
+                                <label for="gender3" class="ms-1">Other</label>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- ===================end of spacing=================== -->
+                        </div>
+                        <div>
+                          <div class="d-flex flex-column">
+                            <div class="mt-3 mb-1">
+                              <label for="patient-emergency-contact"
+                                >Contact No.</label
+                              >
+                            </div>
+                            <div>
+                              <input
+                                type="tel"
+                                name="patient-emergency-contact"
+                                id="patient-emergency-contact"
+                                class="w-100"
+                                placeholder="Enter the contact No."
+                              />
+                            </div>
+                          </div>
+                          <div class="d-flex flex-column">
+                            <div class="mt-3 mb-1">
+                              <label for="patient-emergency-address"
+                                >Address
+                              </label>
+                            </div>
+                            <div>
+                              <input
+                                type="text"
+                                name="patient-emergency-address"
+                                id="patient-emergency-address"
+                                placeholder="Enter the address"
+                                class="w-100"
+                              />
+                            </div>
+                          </div>
+
+                          <!-- used for spacing only, tamad na ako para ayusin -->
+                          <div class="spacing">
+                            <div class="d-flex ms-1">
+                              <div class="me-4">
+                                <input type="radio" />
+                                <label for="gender1" class="ms-1">Male</label
+                                ><br />
+                              </div>
+                              <div class="me-4">
+                                <input type="radio" />
+                                <label for="gender2" class="ms-1">Female</label
+                                ><br />
+                              </div>
+                              <div>
+                                <input type="radio" />
+                                <label for="gender3" class="ms-1">Other</label>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- ===================end of spacing=================== -->
+                        </div>
+                        <div class="mb-4">
+                          <div class="d-flex flex-column">
+                            <div class="mt-3 mb-1">
+                              <label for="patient-emergency-country"
+                                >Country
+                              </label>
+                            </div>
+                            <div>
+                              <input
+                                type="text"
+                                placeholder="Enter the country"
+                                name="patient-emergency-country"
+                                id="patient-emergency-country"
+                                class="w-100"
+                              />
+                            </div>
+                          </div>
+
+                          <div class="d-flex flex-column">
+                            <div class="mt-3 mb-1">
+                              <label for="patient-emergency-city">City</label>
+                            </div>
+                            <div>
+                              <input
+                                type="text"
+                                name="patient-emergency-city"
+                                id="patient-emergency-city"
+                                class="w-100"
+                                placeholder="Enter the city"
+                              />
+                            </div>
+                          </div>
+
+                          <!-- used for spacing only, tamad na ako para ayusin -->
+                          <div class="spacing">
+                            <div class="d-flex ms-1">
+                              <div class="me-4">
+                                <input type="radio" />
+                                <label for="gender1" class="ms-1">Male</label
+                                ><br />
+                              </div>
+                              <div class="me-4">
+                                <input type="radio" />
+                                <label for="gender2" class="ms-1">Female</label
+                                ><br />
+                              </div>
+                              <div>
+                                <input type="radio" />
+                                <label for="gender3" class="ms-1">Other</label>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- ===================end of spacing=================== -->
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -476,9 +866,11 @@
     flatpickr(".date-picker", {
       dateFormat: "m-d-Y",
       defaultDate: "today",
+      static: true,
     });
     flatpickr(".birth-date", {
       dateFormat: "m-d-Y",
+      static: true,
     });
   </script>
 </html>

@@ -26,8 +26,11 @@ input[type="radio"] {
 #calendar-img {
   width: 25px;
 }
+.flatpickr-wrapper {
+  width: 100%;
+}
 .date {
-  margin-top: 1px;
+  margin-top: 2px;
   border: 1px solid gray;
   padding-left: 10px;
   border-radius: 5px;
@@ -46,4 +49,40 @@ input[type="radio"] {
 }
 .patient-pressure {
   width: 102px;
+}
+select {
+  text-indent: 3px;
+  padding: 3px;
+}
+
+input {
+  padding-left: 7px;
+}
+.form-container {
+  margin-bottom: 1cm;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+.accordion-button {
+  font-weight: 600 !important;
+  font-size: large;
 }

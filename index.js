@@ -27,14 +27,3 @@ function openNav() {
     isOpen = 0;
   }
 }
-
-document.addEventListener("DOMContentLoaded", function () {
-  let datepicker = document.getElementById("datepicker");
-
-  if (datepicker) {
-    // Create a new Datepicker instance
-    var picker = new Datepicker(datepicker, {
-      uiLibrary: "bootstrap5",
-    });
-  }
-});
