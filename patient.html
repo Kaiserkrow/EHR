@@ -4,11 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>EHR - Dashboard</title>
+    <title>EHR - Patient</title>
     <link rel="stylesheet" href="css/bootstrap.css" />
     <link rel="stylesheet" href="./patient.css" />
     <link rel="stylesheet" href="./style.css" />
-
+    <link rel="stylesheet" href="./asset/css_js/table.css" />
     <!-- datepicker -->
     <link
       rel="stylesheet"
@@ -151,6 +151,7 @@
                             </div>
                             <div>
                               <input
+                                class="validate"
                                 type="number"
                                 name="patient-id"
                                 id="patient-id"
@@ -168,6 +169,7 @@
                             </div>
                             <div>
                               <input
+                                class="validate"
                                 type="text"
                                 placeholder="Enter the patient name"
                                 name="patient-name"
@@ -232,6 +234,7 @@
                                   class="birth-date date"
                                   type="datetime-local"
                                   placeholder="Select date"
+                                  id="date-of-birth"
                                 />
                               </div>
                             </div>
@@ -254,6 +257,7 @@
                                   class="date-picker date"
                                   type="datetime-local"
                                   placeholder="Select Admission Date"
+                                  id="admission-date"
                                 />
                               </div>
                             </div>
@@ -316,7 +320,7 @@
 
                           <div class="d-flex flex-column">
                             <div class="mt-3 mb-1">
-                              <label for="patient-pressure"
+                              <label for="patient-pressure-1"
                                 >Blood pressure (mm HG)
                                 <span class="red">*</span></label
                               >
@@ -324,7 +328,7 @@
                             <div class="d-flex">
                               <input
                                 type="number"
-                                name="patient-pressure"
+                                name="patient-pressure-1"
                                 id="patient-pressure-1"
                                 class="patient-pressure"
                                 placeholder="0"
@@ -333,7 +337,7 @@
                               <span class="me-3 ms-3 slash"> / </span>
                               <input
                                 type="number"
-                                name="patient-pressure"
+                                name="patient-pressure-2"
                                 id="patient-pressure-2"
                                 class="patient-pressure"
                                 placeholder="0"
@@ -420,8 +424,8 @@
                             <div>
                               <input
                                 type="text"
-                                name="patient-occupation"
-                                id="patient-occupation"
+                                name="patient-religion"
+                                id="patient-religion"
                                 class="w-100"
                                 placeholder="Enter the religion"
                               />
@@ -885,24 +889,6 @@
                                   /><label for="alcohol-no">No</label><br />
                                 </div>
                               </div>
-                              <div>
-                                <input type="checkbox" id="daily" /><label
-                                  for="daily"
-                                  >Daily</label
-                                >
-                                <input type="checkbox" id="weekly" /><label
-                                  for="weekly"
-                                  >Weekly</label
-                                >
-                                <input
-                                  type="checkbox"
-                                  id="infrequently"
-                                /><label for="infrequently">Infrequently</label>
-                                <input type="checkbox" id="recovering" /><label
-                                  for="recovering"
-                                  >Recovering Alcoholic</label
-                                >
-                              </div>
                             </div>
 
                             <div class="question">
@@ -932,21 +918,6 @@
                                   </div>
                                 </div>
                               </div>
-
-                              <input
-                                type="checkbox"
-                                id="caffeine-daily"
-                              /><label for="caffeine-daily">Daily</label>
-                              <input
-                                type="checkbox"
-                                id="caffeine-weekly"
-                              /><label for="caffeine-weekly">Weekly</label>
-                              <input
-                                type="checkbox"
-                                id="caffeine-infrequently"
-                              /><label for="caffeine-infrequently"
-                                >Infrequently</label
-                              >
                             </div>
                             <div class="question">
                               <div class="d-flex mb-3 justify-content-between">
@@ -1294,7 +1265,7 @@
                 >
                   Close
                 </button>
-                <button type="submit" class="btn btn-patient">
+                <button type="submit" class="btn btn-patient" id="input-submit">
                   Save Patient
                 </button>
               </div>
@@ -1303,6 +1274,51 @@
         </div>
       </div>
       <!-- patient info starts here -->
+      <div class="table_component me-5 mt-5" role="region" tabindex="0">
+        <div class="table_component me-5 mt-5" role="region" tabindex="0">
+          <table>
+            <thead>
+              <tr>
+                <th>Patient Name</th>
+                <th>Header 2</th>
+                <th>Header 3</th>
+                <th>Header 4</th>
+                <th>Header 5</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
     </div>
   </body>
   <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
@@ -1310,6 +1326,7 @@
   <script src="./asset/css_js/init.js"></script>
   <script src="js/bootstrap.bundle.js"></script>
   <script src="index.js"></script>
+  <script type="module" src="./asset/css_js/patientSubmit.js"></script>
   <script>
     flatpickr(".date-picker", {
       dateFormat: "m-d-Y",

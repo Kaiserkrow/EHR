@@ -1,6 +1,7 @@
 :root {
   --violet: #5463d0;
 }
+
 .btn-patient,
 .btn-patient:focus,
 .btn-patient:active {
@@ -102,4 +103,8 @@ input {
 
 #medical-history-survey input {
   transform: scale(1.2);
+}
+
+.toast {
+  z-index: 99999 !important;
 }
