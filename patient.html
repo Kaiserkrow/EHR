@@ -835,6 +835,454 @@
                       </div>
                     </div>
                   </div>
+
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#patient-medical-history"
+                        aria-expanded="true"
+                        aria-controls="patient-medical-history"
+                      >
+                        Patient Medical History
+                      </button>
+                    </h2>
+                    <div
+                      id="patient-medical-history"
+                      class="accordion-collapse collapse show"
+                    >
+                      <div
+                        class="accordion-body d-flex flex-column me-5 ms-5 mt-3"
+                      >
+                        <!-- =================START OF MEDICAL HISTORY BODY ==========================-->
+                        <div>
+                          <!-- <div> family history goes here</div> -->
+                          <div>
+                            <p class="question-title">
+                              Social History Survey <span class="red">*</span>
+                            </p>
+
+                            <div class="question">
+                              <div class="d-flex mb-3 justify-content-between">
+                                <label for="alcohol" class="me-5"
+                                  >- Do you drink alcohol?</label
+                                ><br />
+                                <div>
+                                  <input
+                                    type="radio"
+                                    name="alcohol"
+                                    id="alcohol-yes"
+                                  /><label for="alcohol-yes" class="me-5"
+                                    >Yes</label
+                                  >
+
+                                  <input
+                                    type="radio"
+                                    name="alcohol"
+                                    id="alcohol-no"
+                                  /><label for="alcohol-no">No</label><br />
+                                </div>
+                              </div>
+                              <div>
+                                <input type="checkbox" id="daily" /><label
+                                  for="daily"
+                                  >Daily</label
+                                >
+                                <input type="checkbox" id="weekly" /><label
+                                  for="weekly"
+                                  >Weekly</label
+                                >
+                                <input
+                                  type="checkbox"
+                                  id="infrequently"
+                                /><label for="infrequently">Infrequently</label>
+                                <input type="checkbox" id="recovering" /><label
+                                  for="recovering"
+                                  >Recovering Alcoholic</label
+                                >
+                              </div>
+                            </div>
+
+                            <div class="question">
+                              <div class="d-flex mb-3 justify-content-between">
+                                <div>
+                                  <label for="caffeine" class="me-5"
+                                    >- Do you drink caffeine?</label
+                                  ><br />
+                                </div>
+                                <div class="d-flex">
+                                  <div>
+                                    <input
+                                      type="radio"
+                                      name="caffeine"
+                                      id="caffeine-yes"
+                                      class="ms-5"
+                                    /><label for="caffeine-yes" class="me-5"
+                                      >Yes</label
+                                    >
+                                  </div>
+                                  <div>
+                                    <input
+                                      type="radio"
+                                      name="caffeine"
+                                      id="caffeine-no"
+                                    /><label for="caffeine-no">No</label><br />
+                                  </div>
+                                </div>
+                              </div>
+
+                              <input
+                                type="checkbox"
+                                id="caffeine-daily"
+                              /><label for="caffeine-daily">Daily</label>
+                              <input
+                                type="checkbox"
+                                id="caffeine-weekly"
+                              /><label for="caffeine-weekly">Weekly</label>
+                              <input
+                                type="checkbox"
+                                id="caffeine-infrequently"
+                              /><label for="caffeine-infrequently"
+                                >Infrequently</label
+                              >
+                            </div>
+                            <div class="question">
+                              <div class="d-flex mb-3 justify-content-between">
+                                <div>
+                                  <label for="smoke" class="me-5"
+                                    >- Do you smoke?</label
+                                  ><br />
+                                </div>
+                                <div>
+                                  <input
+                                    type="radio"
+                                    name="smoke"
+                                    class="ms-5"
+                                    id="smoke-yes"
+                                  /><label for="smoke-yes" class="me-5"
+                                    >Yes</label
+                                  >
+                                  <input
+                                    type="radio"
+                                    name="smoke"
+                                    id="smoke-no"
+                                  /><label for="smoke-no">No</label><br />
+                                </div>
+                              </div>
+                            </div>
+                            <div class="question">
+                              <div class="d-flex justify-content-between">
+                                <div>
+                                  <label for="sexually-active" class="me-5"
+                                    >- Are you sexually active?</label
+                                  ><br />
+                                </div>
+                                <div>
+                                  <input
+                                    type="radio"
+                                    name="sexually-active"
+                                    id="sexually-active-yes"
+                                  /><label
+                                    for="sexually-active-yes"
+                                    class="me-5"
+                                    >Yes</label
+                                  >
+                                  <input
+                                    type="radio"
+                                    name="sexually-active"
+                                    id="sexually-active-no"
+                                  /><label for="sexually-active-no">No</label>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="question">
+                              <div class="d-flex justify-content-between">
+                                <div>
+                                  <label for="std-check" class="me-5"
+                                    >- Do you wish to be checked for
+                                    STDs?</label
+                                  ><br />
+                                </div>
+                                <div>
+                                  <input
+                                    type="radio"
+                                    name="std-check"
+                                    id="std-check-yes"
+                                  /><label for="std-check-yes" class="me-5"
+                                    >Yes</label
+                                  >
+                                  <input
+                                    type="radio"
+                                    name="std-check"
+                                    id="std-check-no"
+                                  /><label for="std-check-no">No</label>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div id="medical-history-survey">
+                          <p class="question-title">
+                            Medical History <span class="red">*</span>
+                          </p>
+                          <p class="question-description">
+                            - Have you ever had any of the following?
+                          </p>
+                          <div class="question mt-4">
+                            <div
+                              class="checkbox-container d-flex justify-content-evenly"
+                            >
+                              <div>
+                                <input type="checkbox" id="none" /><label
+                                  for="none"
+                                  >NONE of the problems listed</label
+                                ><br />
+                                <input type="checkbox" id="allergies" /><label
+                                  for="allergies"
+                                  >Allergies</label
+                                ><br />
+                                <input type="checkbox" id="anemia" /><label
+                                  for="anemia"
+                                  >Anemia</label
+                                ><br />
+                                <input
+                                  type="checkbox"
+                                  id="arterial-fibrillation"
+                                /><label for="arterial-fibrillation"
+                                  >Arterial fibrillation</label
+                                ><br />
+                                <input
+                                  type="checkbox"
+                                  id="arthritis-conditions"
+                                /><label for="arthritis-conditions"
+                                  >Arthritis conditions</label
+                                ><br />
+                                <input type="checkbox" id="asthma" /><label
+                                  for="asthma"
+                                  >Asthma</label
+                                ><br />
+                                <input type="checkbox" id="bph" /><label
+                                  for="bph"
+                                  >BPH</label
+                                ><br />
+                                <input
+                                  type="checkbox"
+                                  id="bleeding-problems"
+                                /><label for="bleeding-problems"
+                                  >Bleeding problems</label
+                                ><br />
+                                <input
+                                  type="checkbox"
+                                  id="cad-coronary-artery-disease"
+                                /><label for="cad-coronary-artery-disease"
+                                  >CAD coronary artery disease</label
+                                ><br />
+                                <input type="checkbox" id="cancer" /><label
+                                  for="cancer"
+                                  >Cancer</label
+                                ><br />
+                                <input
+                                  type="checkbox"
+                                  id="cardiac-arrest"
+                                /><label for="cardiac-arrest"
+                                  >Cardiac arrest</label
+                                ><br />
+                                <input
+                                  type="checkbox"
+                                  id="celiac-disease"
+                                /><label for="celiac-disease"
+                                  >Celiac disease</label
+                                ><br />
+                              </div>
+                              <div>
+                                <input type="checkbox" id="chest-pain" /><label
+                                  for="chest-pain"
+                                  >Chest pain</label
+                                ><br />
+                                <input
+                                  type="checkbox"
+                                  id="chronic-fatigue-syndrome"
+                                /><label for="chronic-fatigue-syndrome"
+                                  >Chronic fatigue syndrome</label
+                                ><br />
+                                <input
+                                  type="checkbox"
+                                  id="congestive-heart-failure"
+                                /><label for="congestive-heart-failure"
+                                  >Congestive heart failure</label
+                                ><br />
+                                <input type="checkbox" id="depression" /><label
+                                  for="depression"
+                                  >Depression</label
+                                ><br />
+                                <input type="checkbox" id="diabetes" /><label
+                                  for="diabetes"
+                                  >Diabetes</label
+                                ><br />
+                                <input
+                                  type="checkbox"
+                                  id="drug-alcohol-abuse"
+                                /><label for="drug-alcohol-abuse"
+                                  >Drug/alcohol abuse</label
+                                ><br />
+                                <input
+                                  type="checkbox"
+                                  id="erectile-dysfunction"
+                                /><label for="erectile-dysfunction"
+                                  >Erectile dysfunction</label
+                                ><br />
+                                <input
+                                  type="checkbox"
+                                  id="fibromyalgia"
+                                /><label for="fibromyalgia">Fibromyalgia</label
+                                ><br />
+                                <input type="checkbox" id="gerd" /><label
+                                  for="gerd"
+                                  >Gerd</label
+                                ><br />
+                                <input
+                                  type="checkbox"
+                                  id="heart-disease"
+                                /><label for="heart-disease"
+                                  >Heart disease</label
+                                ><br />
+                                <input
+                                  type="checkbox"
+                                  id="hyperinsulinemia"
+                                /><label for="hyperinsulinemia"
+                                  >Hyperinsulinemia</label
+                                ><br />
+                                <input
+                                  type="checkbox"
+                                  id="hyperlipidemia"
+                                /><label for="hyperlipidemia"
+                                  >Hyperlipidemia</label
+                                ><br />
+                              </div>
+                              <div>
+                                <input
+                                  type="checkbox"
+                                  id="hypertension"
+                                /><label for="hypertension">Hypertension</label
+                                ><br />
+                                <input
+                                  type="checkbox"
+                                  id="hypogonadism-male"
+                                /><label for="hypogonadism-male"
+                                  >Hypogonadism male</label
+                                ><br />
+                                <input
+                                  type="checkbox"
+                                  id="hypothyroidism"
+                                /><label for="hypothyroidism"
+                                  >Hypothyroidism</label
+                                ><br />
+                                <input
+                                  type="checkbox"
+                                  id="infection-problems"
+                                /><label for="infection-problems"
+                                  >Infection problems</label
+                                ><br />
+                                <input type="checkbox" id="insomnia" /><label
+                                  for="insomnia"
+                                  >Insomnia</label
+                                ><br />
+                                <input
+                                  type="checkbox"
+                                  id="irritable-bowel-syndrome"
+                                /><label for="irritable-bowel-syndrome"
+                                  >Irritable bowel syndrome</label
+                                ><br />
+                                <input
+                                  type="checkbox"
+                                  id="kidney-problems"
+                                /><label for="kidney-problems"
+                                  >Kidney problems</label
+                                ><br />
+                                <input type="checkbox" id="menopause" /><label
+                                  for="menopause"
+                                  >Menopause</label
+                                ><br />
+                                <input
+                                  type="checkbox"
+                                  id="migraines-headaches"
+                                /><label for="migraines-headaches"
+                                  >Migraines/headaches</label
+                                ><br />
+                                <input type="checkbox" id="neuropathy" /><label
+                                  for="neuropathy"
+                                  >Neuropathy</label
+                                ><br />
+                                <input
+                                  type="checkbox"
+                                  id="onychomycosis"
+                                /><label for="onychomycosis"
+                                  >Onychomycosis</label
+                                ><br />
+                                <input
+                                  type="checkbox"
+                                  id="organ-injury"
+                                /><label for="organ-injury">Organ injury</label
+                                ><br />
+                              </div>
+                              <div>
+                                <input
+                                  type="checkbox"
+                                  id="osteoporosis"
+                                /><label for="osteoporosis">Osteoporosis</label
+                                ><br />
+                                <input
+                                  type="checkbox"
+                                  id="pulmonary-embolism"
+                                /><label for="pulmonary-embolism"
+                                  >Pulmonary embolism</label
+                                ><br />
+                                <input
+                                  type="checkbox"
+                                  id="seizure-disorders"
+                                /><label for="seizure-disorders"
+                                  >Seizure disorders</label
+                                ><br />
+                                <input
+                                  type="checkbox"
+                                  id="shortness-of-breath"
+                                /><label for="shortness-of-breath"
+                                  >Shortness of breath</label
+                                ><br />
+                                <input
+                                  type="checkbox"
+                                  id="sinus-conditions"
+                                /><label for="sinus-conditions"
+                                  >Sinus conditions</label
+                                ><br />
+                                <input type="checkbox" id="stroke" /><label
+                                  for="stroke"
+                                  >Stroke</label
+                                ><br />
+                                <input type="checkbox" id="syndrome-x" /><label
+                                  for="syndrome-x"
+                                  >Syndrome X</label
+                                ><br />
+                                <input type="checkbox" id="tremors" /><label
+                                  for="tremors"
+                                  >Tremors</label
+                                ><br />
+                                <input
+                                  type="checkbox"
+                                  id="wheat-allergy"
+                                /><label for="wheat-allergy"
+                                  >Wheat allergy</label
+                                >
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- =================END OF MEDICAL HISTORY BODY ==========================-->
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div class="modal-footer">

@@ -86,3 +86,20 @@ input {
   font-weight: 600 !important;
   font-size: large;
 }
+.question-title {
+  font-size: 1.5rem;
+}
+.question {
+  margin-bottom: 30px;
+  margin-left: 20px;
+}
+
+.question input[type="radio"],
+.question input[type="checkbox"] {
+  margin-right: 10px;
+  margin-left: 15px;
+}
+
+#medical-history-survey input {
+  transform: scale(1.2);
+}
