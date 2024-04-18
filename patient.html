@@ -82,7 +82,7 @@
 
     <div id="dashboard-container">
       <div class="d-flex">
-        <div><h3>Patient</h3></div>
+        <div class="ms-5"><h3>Patient</h3></div>
 
         <div class="ms-5">
           <!-- Button trigger modal -->
@@ -1280,48 +1280,21 @@
             <thead>
               <tr>
                 <th>Patient Name</th>
-                <th>Header 2</th>
-                <th>Header 3</th>
-                <th>Header 4</th>
-                <th>Header 5</th>
+                <th>Gender</th>
+                <th>Height (m)</th>
+                <th>Weight (kg)</th>
+                <th>Body Temperature (°C)</th>
+                <th>Blood Pressure (mm HG)</th>
               </tr>
             </thead>
-            <tbody>
-              <tr>
-                <td>1</td>
-                <td>2</td>
-                <td>3</td>
-                <td>4</td>
-                <td>5</td>
-              </tr>
-              <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-            </tbody>
+            <tbody id="table-body"></tbody>
           </table>
         </div>
       </div>
     </div>
   </body>
   <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script type="module" src="./asset/css_js/patientRender.js"></script>
   <script src="./asset/css_js/auth.js"></script>
   <script src="./asset/css_js/init.js"></script>
   <script src="js/bootstrap.bundle.js"></script>

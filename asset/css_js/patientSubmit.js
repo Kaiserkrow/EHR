@@ -19,14 +19,6 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
-// notification for actions
-//
-
-const toast = document.querySelector(".toast");
-const closeIcon = document.querySelector(".close"),
-  progress = document.querySelector(".progress");
-
-let timer1, timer2;
 
 const medicalHistoryNONE = document.getElementById("none");
 medicalHistoryNONE.addEventListener("click", () => {
