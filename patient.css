@@ -26,9 +26,24 @@ input[type="radio"] {
 #calendar-img {
   width: 25px;
 }
-.date-picker {
+.date {
   margin-top: 1px;
   border: 1px solid gray;
   padding-left: 10px;
   border-radius: 5px;
+  width: 100%;
+}
+.slash {
+  margin-top: 2px;
+  transform: scale(1.5);
+}
+#patient-name,
+#patient-id {
+  width: 100%;
+}
+.spacing {
+  opacity: 0;
+}
+.patient-pressure {
+  width: 102px;
 }

@@ -142,7 +142,9 @@
                       id="personal-info"
                       class="accordion-collapse collapse show"
                     >
-                      <div class="accordion-body">
+                      <div
+                        class="accordion-body d-flex justify-content-between me-5 ms-5"
+                      >
                         <div>
                           <div class="d-flex flex-column">
                             <div class="mt-3 mb-1">
@@ -214,7 +216,7 @@
                             </div>
                           </div>
                           <div class="form-container">
-                            <label for="date-picker" class="my-3"
+                            <label for="date-picker" class="mt-3 mb-2"
                               >Admission Date <span class="red">*</span></label
                             >
                             <div class="d-flex">
@@ -226,17 +228,17 @@
                                   class="me-1"
                                 />
                               </div>
-                              <div>
+                              <div class="w-100">
                                 <input
-                                  class="date-picker"
+                                  class="date-picker date"
                                   type="datetime-local"
                                   placeholder="Select Admission Date"
                                 />
                               </div>
                             </div>
                           </div>
-                          <div class="form-container">
-                            <label for="date-picker" class="my-3"
+                          <div class="date-container mb-3">
+                            <label for="date-picker" class="mt-3 mb-2"
                               >Date of Birth <span class="red">*</span></label
                             >
                             <div class="d-flex">
@@ -248,9 +250,9 @@
                                   class="me-1"
                                 />
                               </div>
-                              <div>
+                              <div class="w-100">
                                 <input
-                                  class="birth-date"
+                                  class="birth-date date"
                                   type="datetime-local"
                                   placeholder="Select Date"
                                 />
@@ -258,8 +260,122 @@
                             </div>
                           </div>
                         </div>
-                        <div></div>
-                        <div></div>
+                        <div>
+                          <div class="d-flex flex-column">
+                            <div class="mt-3 mb-1">
+                              <label for="patient-height"
+                                >Height (m) <span class="red">*</span></label
+                              >
+                            </div>
+                            <div>
+                              <input
+                                type="number"
+                                name="patient-height"
+                                id="patient-height"
+                                required
+                                class="w-100"
+                              />
+                            </div>
+                          </div>
+                          <div class="d-flex flex-column">
+                            <div class="mt-3 mb-1">
+                              <label for="patient-weight"
+                                >Weight (kg) <span class="red">*</span></label
+                              >
+                            </div>
+                            <div>
+                              <input
+                                type="number"
+                                name="patient-weight"
+                                id="patient-weight"
+                                required
+                                class="w-100"
+                              />
+                            </div>
+                          </div>
+
+                          <div class="d-flex flex-column">
+                            <div class="mt-3 mb-1">
+                              <label for="patient-temp"
+                                >Body Temperature (°C)
+                                <span class="red">*</span></label
+                              >
+                            </div>
+                            <div>
+                              <input
+                                type="number"
+                                name="patient-temp"
+                                id="patient-temp"
+                                required
+                                class="w-100"
+                              />
+                            </div>
+                          </div>
+
+                          <div class="d-flex flex-column">
+                            <div class="mt-3 mb-1">
+                              <label for="patient-pressure"
+                                >Blood pressure (mm HG)
+                                <span class="red">*</span></label
+                              >
+                            </div>
+                            <div class="d-flex">
+                              <input
+                                type="number"
+                                name="patient-pressure"
+                                id="patient-pressure-1"
+                                class="patient-pressure"
+                                required
+                              />
+                              <span class="me-3 ms-3 slash"> / </span>
+                              <input
+                                type="number"
+                                name="patient-pressure"
+                                id="patient-pressure-2"
+                                class="patient-pressure"
+                                required
+                              />
+                            </div>
+                          </div>
+
+                          <!-- used for spacing only, tamad na ako para ayusin -->
+                          <div class="spacing">
+                            <div class="d-flex ms-1">
+                              <div class="me-4">
+                                <input type="radio" />
+                                <label for="gender1" class="ms-1">Male</label
+                                ><br />
+                              </div>
+                              <div class="me-4">
+                                <input type="radio" />
+                                <label for="gender2" class="ms-1">Female</label
+                                ><br />
+                              </div>
+                              <div>
+                                <input type="radio" />
+                                <label for="gender3" class="ms-1">Other</label>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- ===================end of spacing=================== -->
+                        </div>
+                        <div>
+                          <div class="d-flex flex-column">
+                            <div class="mt-3 mb-1">
+                              <label for="patient-id"
+                                >Patient ID <span class="red">*</span></label
+                              >
+                            </div>
+                            <div>
+                              <input
+                                type="number"
+                                name="patient-id"
+                                id="patient-id"
+                                required
+                              />
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -341,7 +457,7 @@
                   Close
                 </button>
                 <button type="submit" class="btn btn-patient">
-                  Save Changes
+                  Save Patient
                 </button>
               </div>
             </div>
