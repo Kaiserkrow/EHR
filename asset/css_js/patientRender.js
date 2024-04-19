@@ -43,7 +43,7 @@ getDocs(colRef).then((snapshot) => {
   }
 });
 
-function modalDisplay() {
+async function modalDisplay() {
   let surveyQ1 = null;
   let surveyQ2 = null;
   let surveyQ3 = null;
@@ -80,7 +80,7 @@ function modalDisplay() {
   let attribute = this.getAttribute("data-personID");
   let modal = document.getElementById("modal-body-entry");
 
-  getDocs(colRef).then((snapshot) => {
+  await getDocs(colRef).then((snapshot) => {
     surveyQ1 = snapshot.docs[attribute].data().surveyQ1;
     surveyQ2 = snapshot.docs[attribute].data().surveyQ2;
     surveyQ3 = snapshot.docs[attribute].data().surveyQ3;

@@ -17,12 +17,41 @@ const firebaseConfig = {
   messagingSenderId: "1064346521879",
   appId: "1:1064346521879:web:05a47ed4ba5f034e742752",
 };
-let count = 0;
+
+var MyDate = new Date();
+var MyDateString;
+
+MyDate.setDate(MyDate.getDate());
+
+MyDateString =
+  ("0" + (MyDate.getMonth() + 1)).slice(-2) +
+  "-" +
+  ("0" + MyDate.getDate()).slice(-2) +
+  "-" +
+  MyDate.getFullYear();
+
+console.log(MyDateString);
+
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 const colRef = collection(db, "patients");
+const date = new Date(MyDateString);
 
+let day = date.getDate();
+let month = date.getMonth() + 1;
+let year = date.getFullYear();
+
+// This arrangement can be altered based on how we want the date's format to appear.
+let currentDate = `${"0" + month}-${day}-${year}`;
+
+let count = 0;
 getDocs(colRef).then((snapshot) => {
   document.getElementById("all-patient").textContent = snapshot.docs.length;
+  snapshot.docs.forEach((doc) => {
+    if (doc.data().admissionDate == currentDate) {
+      count++;
+    }
+  });
+  document.getElementById("today-patient").textContent = count;
 });
