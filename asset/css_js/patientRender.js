@@ -160,7 +160,6 @@ function modalDisplay() {
                 type="number"
                 name="patient-id"
                 
-                placeholder="Enter the patient ID"
                 required
               />
             </div>
@@ -180,7 +179,6 @@ function modalDisplay() {
                 class="validate w-100"
                 
                 type="text"
-                placeholder="Enter the patient name"
                 name="patient-name"
                 
                 required
@@ -228,7 +226,6 @@ function modalDisplay() {
                   type="text"
                   disabled
                   value = "${birthDate}"
-                  placeholder="Select date"
                   id="date-of-birth"
                 />
               </div>
@@ -253,7 +250,6 @@ function modalDisplay() {
                   value = "${admissionDate}"
                   class="date-picker date W-100"
                   type="text"
-                  placeholder="Select Admission Date"
                   id="admission-date"
                 />
               </div>
@@ -276,7 +272,6 @@ function modalDisplay() {
                 id="patient-height"
                 required
                 class="w-100"
-                placeholder="Enter height"
               />
             </div>
           </div>
@@ -289,11 +284,12 @@ function modalDisplay() {
             <div>
               <input
                 type="number"
+                value = "${patientWeight}"
+                disabled
                 name="patient-weight"
                 id="patient-weight"
                 required
                 class="w-100"
-                placeholder="Enter weight"
               />
             </div>
           </div>
@@ -308,10 +304,11 @@ function modalDisplay() {
             <div>
               <input
                 type="number"
+                value = "${patientTemp}"
+                disabled
                 name="patient-temp"
                 id="patient-temp"
                 required
-                placeholder="Enter body temperature"
                 class="w-100"
               />
             </div>
@@ -327,19 +324,21 @@ function modalDisplay() {
             <div class="d-flex">
               <input
                 type="number"
+                value = "${patientPressure1}"
+                disabled
                 name="patient-pressure-1"
                 id="patient-pressure-1"
                 class="patient-pressure"
-                placeholder="0"
                 required
               />
               <span class="me-3 ms-3 slash"> / </span>
               <input
                 type="number"
+                value = "${patientPressure2}"
+                disabled
                 name="patient-pressure-2"
                 id="patient-pressure-2"
                 class="patient-pressure"
-                placeholder="0"
                 required
               />
             </div>
@@ -374,28 +373,16 @@ function modalDisplay() {
               >
             </div>
             <div>
-              <select
+             
+            <input
                 name="blood-type"
                 id="blood-type"
                 class="w-100"
-              >
-                <option
-                  disabled
-                  selected
-                  value
-                  class="text-center"
-                >
-                  -- Select Blood Type --
-                </option>
-                <option value="a+">A+</option>
-                <option value="a-">A-</option>
-                <option value="b+">B+</option>
-                <option value="b-">B-</option>
-                <option value="o+">O+</option>
-                <option value="o-">O-</option>
-                <option value="ab+">AB+</option>
-                <option value="ab-">AB-</option>
-              </select>
+                value = "${patientBloodType}"
+                disabled
+            >
+               
+              
             </div>
           </div>
 
@@ -408,10 +395,11 @@ function modalDisplay() {
             <div>
               <input
                 type="text"
+                value = "${patientOccupation}"
+                disabled
                 name="patient-occupation"
                 id="patient-occupation"
                 class="w-100"
-                placeholder="Enter the occupation"
               />
             </div>
           </div>
@@ -422,11 +410,12 @@ function modalDisplay() {
             </div>
             <div>
               <input
+                value = "${patientReligion}"
+                disabled
                 type="text"
                 name="patient-religion"
                 id="patient-religion"
                 class="w-100"
-                placeholder="Enter the religion"
               />
             </div>
           </div>
@@ -439,9 +428,10 @@ function modalDisplay() {
             <div>
               <input
                 type="text"
+                value = "${patientNationality}"
+                disabled
                 name="patient-nationality"
                 id="patient-nationality"
-                placeholder="Enter the nationality"
                 class="w-100"
               />
             </div>
@@ -500,10 +490,11 @@ function modalDisplay() {
             </div>
             <div>
               <input
+                value = "${patientAddress}"
+                readonly
                 type="text"
                 name="patient-address"
                 id="patient-address"
-                placeholder="Enter the address"
                 required
                 class="w-100"
               />
@@ -515,8 +506,9 @@ function modalDisplay() {
             </div>
             <div>
               <input
+                value = "${patientCountry}"
+                disabled
                 type="text"
-                placeholder="Enter the country"
                 name="patient-country"
                 id="patient-country"
                 class="w-100"
@@ -551,11 +543,12 @@ function modalDisplay() {
             </div>
             <div>
               <input
+                value = "${patientCity}"
+                disabled
                 type="text"
                 name="patient-city"
                 id="patient-city"
                 class="w-100"
-                placeholder="Enter the city"
               />
             </div>
           </div>
@@ -565,11 +558,12 @@ function modalDisplay() {
             </div>
             <div>
               <input
+              value = "${patientEmail}"
+                disabled
                 type="email"
                 name="patient-email"
                 id="patient-email"
                 class="w-100"
-                placeholder="Enter the email"
               />
             </div>
           </div>
@@ -605,10 +599,11 @@ function modalDisplay() {
             <div>
               <input
                 type="tel"
+                value = "${patientContact1}"
+                disabled
                 name="patient-contact-1"
                 id="patient-contact-1"
                 class="w-100"
-                placeholder="Enter the first contact No."
               />
             </div>
           </div>
@@ -622,10 +617,12 @@ function modalDisplay() {
             <div>
               <input
                 type="tel"
+                value = "${patientContact2}"
+                disabled
                 name="patient-contact-2"
                 id="patient-contact-2"
                 class="w-100"
-                placeholder="Enter the second contact No."
+                
               />
             </div>
           </div>
@@ -681,10 +678,11 @@ function modalDisplay() {
             </div>
             <div>
               <input
+                value = "${patientEmergencyName}"
+                disabled
                 type="text"
                 name="patient-emergency-name"
                 id="patient-emergency-name"
-                placeholder="Enter the name"
                 class="w-100"
               />
             </div>
@@ -697,8 +695,9 @@ function modalDisplay() {
             </div>
             <div>
               <input
+                value = "${patientEmergencyRelationship}"
+                disabled
                 type="text"
-                placeholder="Enter the relationship"
                 name="patient-emergency-relationship"
                 id="patient-emergency-relationship"
                 class="w-100"
@@ -735,11 +734,12 @@ function modalDisplay() {
             </div>
             <div>
               <input
+              value = "${patientEmergencyContact}"
+                disabled
                 type="tel"
                 name="patient-emergency-contact"
                 id="patient-emergency-contact"
                 class="w-100"
-                placeholder="Enter the contact No."
               />
             </div>
           </div>
@@ -751,10 +751,11 @@ function modalDisplay() {
             </div>
             <div>
               <input
+                value = "${patientEmergencyAddress}"
+                readonly
                 type="text"
                 name="patient-emergency-address"
                 id="patient-emergency-address"
-                placeholder="Enter the address"
                 class="w-100"
               />
             </div>
@@ -790,8 +791,9 @@ function modalDisplay() {
             </div>
             <div>
               <input
+                value = "${patientEmergencyCountry}"
+                disabled
                 type="text"
-                placeholder="Enter the country"
                 name="patient-emergency-country"
                 id="patient-emergency-country"
                 class="w-100"
@@ -805,11 +807,12 @@ function modalDisplay() {
             </div>
             <div>
               <input
+                value = "${patientEmergencyCity}"
+                disabled
                 type="text"
                 name="patient-emergency-city"
                 id="patient-emergency-city"
                 class="w-100"
-                placeholder="Enter the city"
               />
             </div>
           </div>
@@ -874,6 +877,7 @@ function modalDisplay() {
                 ><br />
                 <div>
                   <input
+                    disabled
                     type="radio"
                     name="alcohol"
                     id="alcohol-yes"
@@ -882,6 +886,7 @@ function modalDisplay() {
                   >
 
                   <input
+                    disabled
                     type="radio"
                     name="alcohol"
                     id="alcohol-no"
@@ -900,6 +905,7 @@ function modalDisplay() {
                 <div class="d-flex">
                   <div>
                     <input
+                      disabled
                       type="radio"
                       name="caffeine"
                       id="caffeine-yes"
@@ -910,6 +916,7 @@ function modalDisplay() {
                   </div>
                   <div>
                     <input
+                      disabled
                       type="radio"
                       name="caffeine"
                       id="caffeine-no"
@@ -927,6 +934,7 @@ function modalDisplay() {
                 </div>
                 <div>
                   <input
+                    disabled
                     type="radio"
                     name="smoke"
                     class="ms-5"
@@ -935,6 +943,7 @@ function modalDisplay() {
                     >Yes</label
                   >
                   <input
+                    disabled
                     type="radio"
                     name="smoke"
                     id="smoke-no"
@@ -951,6 +960,7 @@ function modalDisplay() {
                 </div>
                 <div>
                   <input
+                    disabled
                     type="radio"
                     name="sexually-active"
                     id="sexually-active-yes"
@@ -960,6 +970,7 @@ function modalDisplay() {
                     >Yes</label
                   >
                   <input
+                    disabled
                     type="radio"
                     name="sexually-active"
                     id="sexually-active-no"
@@ -977,6 +988,7 @@ function modalDisplay() {
                 </div>
                 <div>
                   <input
+                    disabled
                     type="radio"
                     name="std-check"
                     id="std-check-yes"
@@ -984,6 +996,7 @@ function modalDisplay() {
                     >Yes</label
                   >
                   <input
+                    disabled
                     type="radio"
                     name="std-check"
                     id="std-check-no"
@@ -993,7 +1006,7 @@ function modalDisplay() {
             </div>
           </div>
         </div>
-        <div id="medical-history-survey">
+        <div id="Vmedical-history-survey">
           <p class="question-title">
             Medical History <span class="red">*</span>
           </p>
@@ -1254,5 +1267,44 @@ function modalDisplay() {
     </div>
   </div>
 </div>`;
+
+    if (surveyQ1 == "true") {
+      document.getElementById("alcohol-yes").checked = true;
+    } else {
+      document.getElementById("alcohol-no").checked = true;
+    }
+
+    if (surveyQ2 == "true") {
+      document.getElementById("caffeine-yes").checked = true;
+    } else {
+      document.getElementById("caffeine-no").checked = true;
+    }
+
+    if (surveyQ3 == "true") {
+      document.getElementById("smoke-yes").checked = true;
+    } else {
+      document.getElementById("smoke-no").checked = true;
+    }
+    if (surveyQ4 == "true") {
+      document.getElementById("sexually-active-yes").checked = true;
+    } else {
+      document.getElementById("sexually-active-no").checked = true;
+    }
+    if (surveyQ5 == "true") {
+      document.getElementById("std-check-yes").checked = true;
+    } else {
+      document.getElementById("std-check-no").checked = true;
+    }
+    const checkboxes = document.querySelectorAll(
+      "#Vmedical-history-survey input"
+    );
+
+    console.log(checkboxes);
+    for (let i = 0; i < checkboxes.length; i++) {
+      checkboxes[i].setAttribute("disabled", true);
+      if (medicalHistory[i] == true) {
+        checkboxes[i].setAttribute("checked", true);
+      }
+    }
   });
 }
