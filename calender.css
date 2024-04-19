@@ -29,6 +29,9 @@
   box-shadow: var(--shadow);
 }
 .calendar-header {
+  margin-top: 20px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
   background: #9796f0;
   display: flex;
   justify-content: space-between;

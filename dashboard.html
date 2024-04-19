@@ -77,10 +77,28 @@
     <div id="dashboard-container">
       <h3 class="title">Dashboard</h3>
 
-      <div class="parent">
-        <div class="div1 border">ds</div>
-        <div class="div2 border">ds</div>
-        <div class="div3 border">ds</div>
+      <div class="parent ms-5">
+        <div class="div1 border">
+          <div
+            class="h-100 w-100 d-flex flex-column justify-content-center align-items-center mt5"
+          >
+            <div>
+              <h5>All Patients</h5>
+            </div>
+            <div><span class="font-larger" id="all-patient"></span></div>
+          </div>
+        </div>
+        <div class="div2 border">
+          <div
+            class="h-100 w-100 d-flex flex-column justify-content-center align-items-center mt5"
+          >
+            <div>
+              <h5>Patients Today</h5>
+            </div>
+            <div><span class="font-larger" id="today-patient"></span></div>
+          </div>
+        </div>
+        <div class="div3 border"></div>
 
         <div class="div5 d-flex justify-content-center">
           <div class="calendar">
@@ -135,4 +153,5 @@
   <script src="js/bootstrap.bundle.js"></script>
   <script src="index.js"></script>
   <script src="./asset/css_js/calendar.js"></script>
+  <script type="module" src="./asset/css_js/dashboard.js"></script>
 </html>

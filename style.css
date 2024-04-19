@@ -148,12 +148,21 @@ a {
 .title {
   margin-bottom: 8rem;
 }
+.font-larger {
+  font-size: 2.5rem;
+  color: var(--violet);
+  font-weight: 600;
+}
 .parent {
   gap: 3rem;
 }
 /* -------------------------containers---------------------------------------- */
 
 #dashboard-container {
+  margin: -2.5rem 0 0 15rem;
+  color: black;
+}
+#patient-container {
   margin: -2.5rem 0 0 8rem;
   color: black;
 }
@@ -209,13 +218,19 @@ button:hover {
 .div1 {
   grid-area: 1 / 1 / 2 / 2;
   margin-bottom: 1rem;
+  background-color: white;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 .div2 {
   grid-area: 1 / 2 / 2 / 3;
   margin-bottom: 1rem;
+  background-color: white;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 .div3 {
   grid-area: 2 / 1 / 3 / 3;
+  background-color: white;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 .div4 {
   grid-area: 3 / 1 / 6 / 3;
