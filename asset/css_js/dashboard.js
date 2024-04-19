@@ -24,8 +24,5 @@ const db = getFirestore(app);
 const colRef = collection(db, "patients");
 
 getDocs(colRef).then((snapshot) => {
-  snapshot.docs.forEach((doc) => {
-    count++;
-  });
+  document.getElementById("all-patient").textContent = snapshot.docs.length;
 });
-console.log(count);
