@@ -95,7 +95,38 @@
             + Add Patient
           </button>
         </div>
-
+        <div id="view-patient-modal">
+          <div
+            class="modal fade"
+            id="staticBackdrop"
+            data-bs-backdrop="static"
+            data-bs-keyboard="false"
+            tabindex="-1"
+            aria-labelledby="staticBackdropLabel"
+            aria-hidden="true"
+          >
+            <div
+              class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl"
+            >
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1
+                    class="modal-title fs-3 ms-2 p-2 Vtitle-patient-name"
+                    id="staticBackdropLabel"
+                  ></h1>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div id="modal-body-entry" class="modal-body"></div>
+                <div class="modal-footer"></div>
+              </div>
+            </div>
+          </div>
+        </div>
         <!-- Modal -->
         <div
           class="modal fade"
@@ -1274,6 +1305,7 @@
         </div>
       </div>
       <!-- patient info starts here -->
+
       <div class="table_component me-5 mt-5" role="region" tabindex="0">
         <div class="table_component me-5 mt-5" role="region" tabindex="0">
           <table>

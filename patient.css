@@ -9,7 +9,9 @@
   color: white;
   font-family: poppins;
 }
-
+.Vtitle-patient-name {
+  color: var(--violet);
+}
 #add-patient {
   color: var(--violet);
 }
