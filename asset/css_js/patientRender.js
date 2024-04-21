@@ -26,8 +26,8 @@ getDocs(colRef).then((snapshot) => {
   snapshot.docs.forEach((doc) => {
     document.getElementById(
       "table-body"
-    ).innerHTML += `<tr data-bs-toggle="modal" data-bs-target="#staticBackdrop" data-personID="${count}">
-        <td>${doc.data().patientName}</td>
+    ).innerHTML += `<tr data-bs-toggle="modal" class="view" data-bs-target="#staticBackdrop" data-personID="${count}">
+        <td class="patient-name">${doc.data().patientName}</td>
         <td>${doc.data().patientGender}</td>
         <td>${doc.data().patientHeight}</td>
         <td>${doc.data().patientWeight}</td>
@@ -43,6 +43,24 @@ getDocs(colRef).then((snapshot) => {
   }
 });
 
+document
+  .getElementById("search-bar")
+  .addEventListener("input", async function () {
+    let text = document.getElementById("search-bar").value.toLowerCase();
+    const rows = document.querySelectorAll("tr[data-personID]");
+
+    const names = document.querySelectorAll(".patient-name");
+    for (let i = 0; i < rows.length; i++) {
+      if (text == "") {
+        rows[i].classList.remove("hide");
+      }
+      if (!names[i].textContent.toLowerCase().includes(text)) {
+        rows[i].classList.add("hide");
+      } else {
+        rows[i].classList.remove("hide");
+      }
+    }
+  });
 async function modalDisplay() {
   let surveyQ1 = null;
   let surveyQ2 = null;

@@ -110,3 +110,36 @@ input {
 .toast {
   z-index: 99999 !important;
 }
+.hide {
+  display: none;
+}
+.box {
+  margin-top: -1px;
+  margin-left: 10rem;
+  width: 400px;
+  height: 40px;
+  background-color: white;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  border: solid 1px gray;
+}
+
+.box > i {
+  font-size: 20px;
+  color: #777;
+}
+
+.box > input {
+  flex: 1;
+  height: 40px;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  padding-left: 10px;
+}
+
+#search-icon {
+  width: 20px;
+}
